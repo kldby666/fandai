@@ -4,5 +4,28 @@
       "source": "/:path*",
       "destination": "http://47.98.124.226:2333/:path*"
     }
+  ],
+  "headers": [
+    {
+      "source": "/api/v3/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "https://www.shiguang520.top"
+        },
+        {
+          "key": "Access-Control-Allow-Credentials",
+          "value": "true"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET,POST,PUT,DELETE,OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Authorization"
+        }
+      ]
+    }
   ]
 }
